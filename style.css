@@ -350,6 +350,7 @@ main {
 
 section {
   height: 100%;
+  max-height: calc(100vh - var(--global-pad) * 2 - var(--logo-h) - var(--gap-M));
   display: none;
   gap: var(--gap-S);
 }
