@@ -259,9 +259,10 @@ main {
   container-type: inline-size;
   position: relative;
   isolation: isolate;
-  overflow: clip;
+  /* overflow: clip; */
 }
 .modal #maps_container .map img {
+  border-radius: var(--br);
   position: absolute;
   display: block;
   width: 100%;
@@ -270,6 +271,7 @@ main {
   object-position: center;
 }
 .modal #maps_container .map p {
+  border-radius: var(--br);
   padding: 0.5rem;
   text-align: center;
   font-weight: 700;
@@ -576,6 +578,8 @@ button.hidden {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: var(--br);
+  width: 100%;
+  margin: 0 auto;
 }
 #section_start .card .card-back .card_image {
   background-size: auto 80%;
