@@ -14,7 +14,7 @@
   --gap-XM: calc(var(--gap) * 5);
   --gap-L: calc(var(--gap) * 6);
   --animation-duration: 0.3s;
-  --logo-h: 100px;
+  --logo-h: 60px;
   --global-pad: 0.75rem;
   --doc-max-h: 100svh;
 }
