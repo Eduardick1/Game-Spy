@@ -16,6 +16,13 @@
   --animation-duration: 0.3s;
   --logo-h: 100px;
   --global-pad: 0.75rem;
+  --doc-max-h: 100svh;
+}
+
+@supports not (height: 100svh) {
+  :root {
+    --doc-max-h: 100vh;
+  }
 }
 *,
 *::before,
@@ -113,9 +120,7 @@ button {
 ul {
   list-style: none;
 }
-html {
-  overflow: hidden;
-}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -126,10 +131,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--gap-M);
-  max-height: 100vh;
-  max-height: 100svh;
-  height: 100vh;
-  height: 100svh;
+  height: var(--doc-max-h);
+  max-height: var(--doc-max-h);
 }
 main {
   height: 100%;
@@ -352,7 +355,9 @@ main {
 
 section {
   height: 100%;
-  max-height: calc(100vh - var(--global-pad) * 2 - var(--logo-h) - var(--gap-M));
+  max-height: calc(
+    var(--doc-max-h) - var(--global-pad) * 2 - var(--logo-h) - var(--gap-M)
+  );
   display: none;
   gap: var(--gap-S);
 }
@@ -492,7 +497,7 @@ section.shown {
   flex-direction: column;
   gap: var(--gap);
   max-height: calc(
-    100vh - var(--global-pad) * 2 - var(--logo-h) - var(--gap-M) -
+    var(--doc-max-h) - var(--global-pad) * 2 - var(--logo-h) - var(--gap-M) -
       var(--elem-size) * (var(--count-children) - 1) - var(--gap-S) *
       (var(--count-children) - 1) - var(--formAdditionSize)
   );
@@ -577,8 +582,9 @@ button.hidden {
 
 #section_start .card .card_image {
   background-color: gray;
+  height: inherit;
   max-height: 70%;
-  aspect-ratio: 1;
+/*   aspect-ratio: 1; */
   background-position: center;
   background-repeat: no-repeat;
   border-radius: var(--br);
