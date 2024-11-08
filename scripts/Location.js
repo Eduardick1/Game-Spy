@@ -10,11 +10,11 @@ class Location {
 }
 
 export class LocationsManager {
-  locations = [];
-  constructor() {
-    LOCATIONS.forEach(({ name, imagesrc }) =>
-      this.locations.push(new Location(name, imagesrc))
-    );
+  constructor(locations = []) {
+    this.locations =
+      locations.length > 0
+        ? locations
+        : LOCATIONS.map(({ name, imagesrc }) => new Location(name, imagesrc));
     this.currentLocation = null;
   }
   setRandomLocation() {
