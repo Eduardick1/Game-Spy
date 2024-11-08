@@ -316,11 +316,6 @@ main {
 }
 .modal .info .info_btn {
   background-color: var(--inActive-clr);
-  border-radius: var(--br);
-  width: var(--elem-size);
-  height: var(--elem-size);
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: 80%;
   background-image: url("./images/icons/icon_layout.svg");
 }
@@ -405,10 +400,8 @@ section.shown {
   height: var(--elem-size);
   aspect-ratio: 1;
   border-radius: var(--br);
-  overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
 }
 
 .player-elem {
@@ -584,7 +577,7 @@ button.hidden {
   background-color: gray;
   height: inherit;
   max-height: 70%;
-/*   aspect-ratio: 1; */
+  /* aspect-ratio: 1; */
   background-position: center;
   background-repeat: no-repeat;
   border-radius: var(--br);
