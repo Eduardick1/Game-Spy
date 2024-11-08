@@ -39,7 +39,7 @@ export class SpyGame {
   reload() {
     this.Settings = new Settings(this.Settings);
     this.players = new PlayersManager(this.players.all);
-    this.location = new LocationsManager();
+    this.location = new LocationsManager(this.location.locations);
     this.timer = null;
     this.isTimerPaused = false;
     this.winnerSide = null;
