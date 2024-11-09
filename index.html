@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="Logo"></div>
+    </header>
+    <main>
+      <div id="container">
+        <section id="section_prepare" data-screen="prepare">
+          <div class="menu">
+            <button
+              type="button"
+              data-modal="settings"
+              class="btn menu_item settings"
+            >
+              <p>Настройки</p>
+              <span>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M27.1797 3.28125H22.9951C22.614 1.41143 20.9571 0 18.9766 0C16.996 0 15.3391 1.41143 14.958 3.28125H0.820312C0.366898 3.28125 0 3.64815 0 4.10156C0 4.55498 0.366898 4.92188 0.820312 4.92188H14.958C15.3391 6.7917 16.996 8.20312 18.9766 8.20312C20.9571 8.20312 22.614 6.7917 22.9951 4.92188H27.1797C27.6331 4.92188 28 4.55498 28 4.10156C28 3.64815 27.6331 3.28125 27.1797 3.28125ZM27.1797 13.1797H13.0967C12.7156 11.3099 11.0587 9.89844 9.07812 9.89844C7.09756 9.89844 5.4407 11.3099 5.05958 13.1797H0.820312C0.366898 13.1797 0 13.5466 0 14C0 14.4534 0.366898 14.8203 0.820312 14.8203H5.05958C5.4407 16.6901 7.09756 18.1016 9.07812 18.1016C11.0587 18.1016 12.7156 16.6901 13.0967 14.8203H27.1797C27.6331 14.8203 28 14.4534 28 14C28 13.5466 27.6331 13.1797 27.1797 13.1797ZM27.1797 23.0781H22.9951C22.614 21.2083 20.9571 19.7969 18.9766 19.7969C16.996 19.7969 15.3391 21.2083 14.958 23.0781H0.820312C0.366898 23.0781 0 23.445 0 23.8984C0 24.3519 0.366898 24.7188 0.820312 24.7188H14.958C15.3391 26.5886 16.996 28 18.9766 28C20.9571 28 22.614 26.5886 22.9951 24.7188H27.1797C27.6331 24.7188 28 24.3519 28 23.8984C28 23.445 27.6331 23.0781 27.1797 23.0781Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              type="button"
+              data-modal="maps"
+              class="btn menu_item locations"
+            >
+              <p>Локации</p>
+              <span>
+                <svg
+                  width="19"
+                  height="28"
+                  viewBox="0 0 19 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.66667 0C4.52035 0 0.333313 4.18704 0.333313 9.33335C0.333313 10.8783 0.719571 12.4101 1.45386 13.7687L9.15627 27.6992C9.25881 27.8849 9.4542 28 9.66667 28C9.87913 28 10.0745 27.8849 10.1771 27.6992L17.8823 13.7641C18.6138 12.4101 19 10.8782 19 9.3333C19 4.18704 14.813 0 9.66667 0ZM9.66667 14C7.09351 14 5.00002 11.9065 5.00002 9.33335C5.00002 6.7602 7.09351 4.6667 9.66667 4.6667C12.2398 4.6667 14.3333 6.7602 14.3333 9.33335C14.3333 11.9065 12.2398 14 9.66667 14Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <form action="#" name="prepare" class="form_prepare">
+            <input
+              type="text"
+              name="player"
+              placeholder="Имя игрока"
+              class="player-elem"
+              required
+            />
+            <button type="submit" class="btn-sm"></button>
+          </form>
+          <ul id="list_prepare"></ul>
+          <button type="button" class="btn hidden" name="btnSubmit" main-btn>
+            Играть
+          </button>
+          <script async src=""></script>
+        </section>
+        <section id="section_start" data-screen="start">
+          <div class="">
+            <h2 class="title">Игрок: <span data-player-name>Эдуард</span></h2>
+          </div>
+          <div class="card">
+            <div class="card_inner">
+              <div class="card-back">
+                <div class="card_image"></div>
+                <div class="card_text">
+                  <h3>Не показывайте никому свою роль!</h3>
+                  <p>
+                    После просмотра роли нажмите на кнопку и передайте
+                    следующему игроку
+                  </p>
+                </div>
+              </div>
+              <div class="card-front">
+                <div class="card_image" data-player-img></div>
+                <ul class="card_text">
+                  <li class="highlighted">
+                    Локация: <span data-player-location>Обсерватория</span>
+                  </li>
+                  <li class="highlighted">
+                    Ваша роль: <span data-player-role>Мирный житель</span>
+                  </li>
+                  <li>
+                    Ваша цель: <span data-player-target>Вычислить локацию</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn" name="btnSubmit" main-btn disabled>
+            Посмотреть роль
+          </button>
+        </section>
+        <section id="section_process" data-screen="process">
+          <div class="menu">
+            <button
+              type="button"
+              data-modal="settings"
+              style="display: none"
+              class="btn menu_item settings"
+            >
+              <p>Настройки</p>
+              <span>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M27.1797 3.28125H22.9951C22.614 1.41143 20.9571 0 18.9766 0C16.996 0 15.3391 1.41143 14.958 3.28125H0.820312C0.366898 3.28125 0 3.64815 0 4.10156C0 4.55498 0.366898 4.92188 0.820312 4.92188H14.958C15.3391 6.7917 16.996 8.20312 18.9766 8.20312C20.9571 8.20312 22.614 6.7917 22.9951 4.92188H27.1797C27.6331 4.92188 28 4.55498 28 4.10156C28 3.64815 27.6331 3.28125 27.1797 3.28125ZM27.1797 13.1797H13.0967C12.7156 11.3099 11.0587 9.89844 9.07812 9.89844C7.09756 9.89844 5.4407 11.3099 5.05958 13.1797H0.820312C0.366898 13.1797 0 13.5466 0 14C0 14.4534 0.366898 14.8203 0.820312 14.8203H5.05958C5.4407 16.6901 7.09756 18.1016 9.07812 18.1016C11.0587 18.1016 12.7156 16.6901 13.0967 14.8203H27.1797C27.6331 14.8203 28 14.4534 28 14C28 13.5466 27.6331 13.1797 27.1797 13.1797ZM27.1797 23.0781H22.9951C22.614 21.2083 20.9571 19.7969 18.9766 19.7969C16.996 19.7969 15.3391 21.2083 14.958 23.0781H0.820312C0.366898 23.0781 0 23.445 0 23.8984C0 24.3519 0.366898 24.7188 0.820312 24.7188H14.958C15.3391 26.5886 16.996 28 18.9766 28C20.9571 28 22.614 26.5886 22.9951 24.7188H27.1797C27.6331 24.7188 28 24.3519 28 23.8984C28 23.445 27.6331 23.0781 27.1797 23.0781Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </button>
+            <button
+              type="button"
+              data-modal="maps"
+              class="btn menu_item locations"
+            >
+              <p>Локации</p>
+              <span>
+                <svg
+                  width="19"
+                  height="28"
+                  viewBox="0 0 19 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.66667 0C4.52035 0 0.333313 4.18704 0.333313 9.33335C0.333313 10.8783 0.719571 12.4101 1.45386 13.7687L9.15627 27.6992C9.25881 27.8849 9.4542 28 9.66667 28C9.87913 28 10.0745 27.8849 10.1771 27.6992L17.8823 13.7641C18.6138 12.4101 19 10.8782 19 9.3333C19 4.18704 14.813 0 9.66667 0ZM9.66667 14C7.09351 14 5.00002 11.9065 5.00002 9.33335C5.00002 6.7602 7.09351 4.6667 9.66667 4.6667C12.2398 4.6667 14.3333 6.7602 14.3333 9.33335C14.3333 11.9065 12.2398 14 9.66667 14Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="process_content">
+            <div class="spinner"></div>
+            <time datetime="10:00"></time>
+            <h3>Пауза</h3>
+          </div>
+          <div class="process_tips">
+            <p class="process_tips-text">
+              Мирные игроки или Шпион могут остановить игру в любой момент
+            </p>
+          </div>
+        </section>
+        <section id="section_final" data-screen="final">
+          <div class="image" data-final-img></div>
+          <ul class="final_text">
+            <li>Локация: <span data-final-map></span></li>
+            <li>Шпион: <span data-final-spy></span></li>
+          </ul>
+          <button type="button" class="btn" name="btnSubmit" main-btn>
+            Закончить
+          </button>
+        </section>
+        <div data-modal="settings" class="modal">
+          <ul class="settings">
+            <li data-param="spyQuantity" class="settings_param">
+              <div class="param_title">
+                <span class="param_title-icon spy"></span>
+                <p class="param_title-text">Шпионы</p>
+              </div>
+              <div class="param_btns">
+                <button data-param-btn="-" type="button"></button>
+                <input
+                  type="number"
+                  min="0"
+                  max="1"
+                  step="1"
+                  name="spyQuantity"
+                  value="1"
+                  id="paramSpy"
+                />
+                <button data-param-btn="+" type="button"></button>
+              </div>
+            </li>
+            <li data-param="timerDuration" class="settings_param">
+              <div class="param_title">
+                <span class="param_title-icon timer"></span>
+                <p class="param_title-text">Таймер</p>
+              </div>
+              <div class="param_btns">
+                <button data-param-btn="-" type="button"></button>
+                <input
+                  type="number"
+                  min="0"
+                  max="60"
+                  step="5"
+                  name="timerDuration"
+                  id="paramTimer"
+                  value="10"
+                />
+                <button data-param-btn="+" type="button"></button>
+              </div>
+            </li>
+          </ul>
+          <button type="button" class="btn" name="btnSubmit">Назад</button>
+        </div>
+        <div data-modal="maps" class="modal">
+          <div class="info">
+            <button
+              class="info_btn help"
+              style="display: none"
+              type="button"
+            ></button>
+            <button class="btn-sm info_btn view" type="button"></button>
+          </div>
+          <div id="maps_container"></div>
+          <button type="button" class="btn" name="btnSubmit">Назад</button>
+        </div>
+        <div data-modal="winners" class="modal">
+          <h3>Кто победил?</h3>
+          <div class="winners">
+            <button type="button" data-winner="innocent" class="winner">
+              Игроки
+            </button>
+            <button type="button" data-winner="spy" class="winner">
+              Шпион
+            </button>
+          </div>
+          <button type="button" class="btn" name="btnSubmit">Продолжить</button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./scripts/script.js"></script>
+  </body>
+</html>
